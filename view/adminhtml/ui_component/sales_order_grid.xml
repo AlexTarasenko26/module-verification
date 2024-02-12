@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <columns name="sales_order_columns">
+        <column name="require_verification"
+                class="Epam\Development\Ui\Component\Listing\Column\RequireVerification">
+            <settings>
+                <filter>select</filter>
+                <options class="Epam\Development\Ui\Component\Listing\Options"/>
+                <dataType>select</dataType>
+                <label translate="true">Require Verification</label>
+            </settings>
+        </column>
+    </columns>
+</listing>

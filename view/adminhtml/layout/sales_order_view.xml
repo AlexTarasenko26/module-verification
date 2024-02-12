@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block name="verify_order" as="verify.order"
+                   class="Magento\Framework\View\Element\Template"
+                   template="Epam_Development::order/view/verification.phtml"
+                   after="order_history">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">Epam\Development\ViewModel\OrderVerification</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

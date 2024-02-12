@@ -1,0 +1,33 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/** @var Epam\Development\Block\Adminhtml\Order\View\Verification $block */
+/** @var Epam\Development\ViewModel\OrderVerification $orderVerification */
+$orderVerification = $block->getData('view_model');
+$order = $orderVerification->getOrder();
+?>
+<div class="admin__field">
+    <div data-bind="scope: 'ui-component'">
+        <label class="admin__field-label" for="order_verify" data-bind="text: message"></label>
+        <!-- ko template: getTemplate() --><!-- /ko -->
+        <script type="text/x-magento-init">
+            {
+                "*": {
+                    "Magento_Ui/js/core/app": {
+                        "components": {
+                            "ui-component": {
+                                "component": "Epam_Development/js/verification",
+                                "value": "<?= $orderVerification->isVerified(); ?>",
+                                "order": "<?= $order->getData('entity_id'); ?>",
+                                "description": "Order verified"
+                            }
+                        }
+                    }
+                }
+            }
+        </script>
+    </div>
+</div>
