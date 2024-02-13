@@ -22,6 +22,7 @@ $order = $orderVerification->getOrder();
                                 "component": "Epam_Development/js/verification",
                                 "value": "<?= $orderVerification->isVerified(); ?>",
                                 "order": "<?= $order->getData('entity_id'); ?>",
+                                "url": "<?= $block->getBaseUrl(); ?>",
                                 "description": "Order verified"
                             }
                         }

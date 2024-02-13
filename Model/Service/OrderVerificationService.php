@@ -6,14 +6,19 @@ namespace Epam\Development\Model\Service;
 use Epam\Development\Api\OrderVerificationManagementInterface;
 use Epam\Development\Api\OrderVerificationRepositoryInterface;
 use Epam\Development\Api\Data\OrderVerificationInterface;
+use Magento\Framework\Controller\ResultFactory;
+use Magento\Framework\Controller\Result\Json;
+
 class OrderVerificationService implements OrderVerificationManagementInterface
 {
 
     /**
      * @param OrderVerificationRepositoryInterface $verificationRepository
+     * @param ResultFactory $resultFactory
      */
     public function __construct(
-        private readonly OrderVerificationRepositoryInterface $verificationRepository
+        private readonly OrderVerificationRepositoryInterface $verificationRepository,
+        private readonly ResultFactory                        $resultFactory
     )
     {
     }
@@ -32,19 +37,33 @@ class OrderVerificationService implements OrderVerificationManagementInterface
     }
 
     /**
-     * @param OrderVerificationInterface[] $orderData
-     * @return bool
+     * @param OrderVerificationInterface $orderData
+     * @return Json
      */
-    public function setOrderVerification(array $orderData): bool
+    public function setOrderVerification(OrderVerificationInterface $orderData): Json
     {
-        foreach ($orderData as $data) {
-            $order = $this->verificationRepository->get($data->getEntityId());
-            if ($order->getEntityId() > 0) {
-                $order->setRequireVerification($data->getRequireVerification());
-                $this->verificationRepository->save($order);
-                return true;
-            }
+        /** @var Json $resultJson */
+        $resultJson = $this->resultFactory->create(ResultFactory::TYPE_JSON);
+        $responseCode = 200;
+
+        $order = $this->verificationRepository->get($orderData["entity_id"]);
+        if ($order->getEntityId() > 0) {
+            $order->setRequireVerification($orderData["require_verification"]);
+            $this->verificationRepository->save($order);
+            $resultJson->setHttpResponseCode($responseCode);
+            $resultJson->setData([
+                "success" => true,
+                "message" => "verification updated"
+            ]);
+            return $resultJson;
         }
-        return false;
+
+        $responseCode = 500;
+        $resultJson->setHttpResponseCode($responseCode);
+        $resultJson->setData([
+            "success" => true,
+            "message" => $orderData['order_data']
+        ]);
+        return $resultJson;
     }
 }

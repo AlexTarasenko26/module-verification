@@ -13,28 +13,28 @@ define(['uiComponent', 'ko', 'mage/storage', 'mage/url'], function (Component, k
          * @var int isChecked
          */
         onChangeCheckbox: function (isChecked) {
-            this.setOrderVerification(isChecked.order, isChecked.value);
+            this.setOrderVerification(isChecked.order, isChecked.value, isChecked.url);
             // Handle the onChange event of the checkbox
             console.log('Checkbox changed, order id=' + isChecked.order + ' status=' + isChecked.value);
         },
 
-        setOrderVerification: function (id, status) {
-            var requestUrl = urlBuilder.build('rest/V1/orders/setVerification');
+        setOrderVerification: function (id, status, url) {
+            var requestUrl = urlBuilder.build(url + "rest/V1/orders/setVerification");
             var data =
                 {
-                    "orderData": [
+                    "orderData":
                         {
-                            entity_id: id,
-                            require_verification: status
+                            "entity_id": id,
+                            "require_verification": status ? 1 : 0
                         }
-                    ]
                 }
-            storage.put(requestUrl, data)
+            return storage.put(requestUrl, JSON.stringify(data))
                 .done(function (response) {
                     console.log(response);
-                }).fail(function (response) {
-                console.error(response);
-            });
+                })
+                .fail(function (response) {
+                    console.log(response);
+                });
         }
     });
 });

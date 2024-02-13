@@ -2,19 +2,18 @@
 declare(strict_types=1);
 
 namespace Epam\Development\Model;
-
-use Magento\Sales\Model\Order;
+use Magento\Framework\DataObject;
 use Epam\Development\Api\Data\OrderVerificationInterface;
 
-class OrderVerification extends Order implements OrderVerificationInterface
+class OrderVerification extends DataObject implements OrderVerificationInterface
 {
 
     /**
-     * @return int|null
+     * @return int
      */
-    public function getRequireVerification()
+    public function getRequireVerification(): int
     {
-        return $this->getData(OrderVerificationInterface::REQUIRE_VERIFICATION);
+        return $this->_getData(OrderVerificationInterface::REQUIRE_VERIFICATION);
     }
 
     /**
@@ -24,5 +23,22 @@ class OrderVerification extends Order implements OrderVerificationInterface
     public function setRequireVerification(int $verified)
     {
         return $this->setData(OrderVerificationInterface::REQUIRE_VERIFICATION, $verified);
+    }
+
+    /**
+     * @return int
+     */
+    public function getEntityId(): int
+    {
+        return $this->_getData(OrderVerificationInterface::ENTITY_ID);
+    }
+
+    /**
+     * @param int $id
+     * @return OrderVerification
+     */
+    public function setEntityId(int $id)
+    {
+        return $this->setData(OrderVerificationInterface::ENTITY_ID, $id);
     }
 }

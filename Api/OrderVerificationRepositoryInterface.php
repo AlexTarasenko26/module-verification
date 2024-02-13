@@ -4,29 +4,27 @@ declare(strict_types=1);
 namespace Epam\Development\Api;
 
 use Epam\Development\Api\Data\OrderVerificationInterface;
-use Magento\Sales\Api\Data\OrderInterface;
-use Magento\Sales\Api\OrderRepositoryInterface;
 
-interface OrderVerificationRepositoryInterface extends OrderRepositoryInterface
+interface OrderVerificationRepositoryInterface
 {
     /**
-     * @param OrderVerificationInterface|OrderInterface $order
+     * @param OrderVerificationInterface $order
      * @return OrderVerificationInterface
      */
-    public function save(OrderVerificationInterface|OrderInterface $order);
+    public function save(OrderVerificationInterface $order);
 
     /**
      * Loads a specified order.
      *
      * @param int $id The order ID.
-     * @return OrderVerificationInterface|OrderInterface Order interface.
+     * @return OrderVerificationInterface Order interface.
      */
     public function get($id);
 
     /**
-     * @param OrderVerificationInterface|OrderInterface $entity
+     * @param OrderVerificationInterface $entity
      * @return mixed
      */
-    public function delete(OrderVerificationInterface|OrderInterface $entity);
+    public function delete(OrderVerificationInterface $entity);
 
 }

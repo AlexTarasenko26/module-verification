@@ -8,6 +8,10 @@
     <input id="order_verification"
            name="order_verification" type="checkbox"
            class="admin__control-checkbox"
-           data-bind="checked: value, orderId: order, event: { change: onChangeCheckbox.bind($data) }"/>
+           data-bind="
+           checked: value,
+           orderId: order,
+           event: { change: onChangeCheckbox.bind($data) },
+           baseUrl: url"/>
     <label class="admin__field-label" data-bind="text: description"></label>
 </div>

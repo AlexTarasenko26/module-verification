@@ -13,12 +13,12 @@
     </virtualType>
     <preference for="Epam\Development\Api\OrderVerificationRepositoryInterface"
                 type="Epam\Development\Model\OrderVerificationRepository"/>
+
     <preference for="Epam\Development\Api\OrderVerificationManagementInterface"
                 type="Epam\Development\Model\Service\OrderVerificationService"/>
+
     <preference for="Epam\Development\Api\Data\OrderVerificationInterface"
                 type="Epam\Development\Model\OrderVerification"/>
-    <preference for="Epam\Development\Api\Data\VerifyOrderStatusHistoryInterface"
-                type="Epam\Development\Model\Order\Status\VerifyHistory"/>
     <type name="Epam\Development\Model\ResourceModel\Order\Verification">
         <arguments>
             <argument name="connectionName" xsi:type="string">sales</argument>
