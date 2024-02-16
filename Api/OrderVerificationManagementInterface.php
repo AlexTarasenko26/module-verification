@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Epam\Development\Api;
+namespace Epam\Verification\Api;
 
-use Epam\Development\Api\Data\OrderVerificationInterface;
+use Epam\Verification\Api\Data\OrderVerificationInterface;
 use Magento\Framework\Controller\Result\Json;
 interface OrderVerificationManagementInterface
 {

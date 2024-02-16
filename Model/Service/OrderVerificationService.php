@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Epam\Development\Model\Service;
+namespace Epam\Verification\Model\Service;
 
-use Epam\Development\Api\OrderVerificationManagementInterface;
-use Epam\Development\Api\OrderVerificationRepositoryInterface;
-use Epam\Development\Api\Data\OrderVerificationInterface;
+use Epam\Verification\Api\OrderVerificationManagementInterface;
+use Epam\Verification\Api\OrderVerificationRepositoryInterface;
+use Epam\Verification\Api\Data\OrderVerificationInterface;
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Framework\Controller\Result\Json;
 

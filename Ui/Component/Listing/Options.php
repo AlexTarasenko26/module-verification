@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Epam\Development\Ui\Component\Listing;
+namespace Epam\Verification\Ui\Component\Listing;
 
 use Magento\Framework\Data\OptionSourceInterface;
 

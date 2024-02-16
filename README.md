@@ -1,4 +1,4 @@
-## _Epam_Development_
+## _Epam_Verification_
 
 Feature list:
 

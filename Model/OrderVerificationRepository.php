@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Epam\Development\Model;
+namespace Epam\Verification\Model;
 
 use Magento\Sales\Model\OrderRepository;
-use Epam\Development\Api\Data\OrderVerificationInterface;
-use Epam\Development\Api\OrderVerificationRepositoryInterface;
+use Epam\Verification\Api\Data\OrderVerificationInterface;
+use Epam\Verification\Api\OrderVerificationRepositoryInterface;
 use Magento\Sales\Api\Data\OrderInterface;
 
 class OrderVerificationRepository implements OrderVerificationRepositoryInterface

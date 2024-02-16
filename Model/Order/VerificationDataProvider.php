@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Epam\Development\Model\Order;
+namespace Epam\Verification\Model\Order;
 
 use Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider;
 

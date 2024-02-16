@@ -9,6 +9,6 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
     <event name="sales_order_place_after">
         <observer name="require_verification_adminhtml"
-                  instance="Epam\Development\Observer\Adminhtml\Verification"/>
+                  instance="Epam\Verification\Observer\Adminhtml\Verification"/>
     </event>
 </config>

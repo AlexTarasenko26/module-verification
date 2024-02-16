@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Epam\Development\Api\Data;
+namespace Epam\Verification\Api\Data;
 
 interface OrderVerificationInterface
 {

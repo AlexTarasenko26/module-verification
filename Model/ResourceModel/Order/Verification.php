@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Epam\Development\Model\ResourceModel\Order;
+namespace Epam\Verification\Model\ResourceModel\Order;
 
 use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 

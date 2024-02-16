@@ -5,10 +5,10 @@
         <referenceContainer name="content">
             <block name="verify_order" as="verify.order"
                    class="Magento\Framework\View\Element\Template"
-                   template="Epam_Development::order/view/verification.phtml"
+                   template="Epam_Verification::order/view/verification.phtml"
                    after="order_history">
                 <arguments>
-                    <argument name="view_model" xsi:type="object">Epam\Development\ViewModel\OrderVerification</argument>
+                    <argument name="view_model" xsi:type="object">Epam\Verification\ViewModel\OrderVerification</argument>
                 </arguments>
             </block>
         </referenceContainer>

@@ -11,15 +11,15 @@
             </argument>
         </arguments>
     </virtualType>
-    <preference for="Epam\Development\Api\OrderVerificationRepositoryInterface"
-                type="Epam\Development\Model\OrderVerificationRepository"/>
+    <preference for="Epam\Verification\Api\OrderVerificationRepositoryInterface"
+                type="Epam\Verification\Model\OrderVerificationRepository"/>
 
-    <preference for="Epam\Development\Api\OrderVerificationManagementInterface"
-                type="Epam\Development\Model\Service\OrderVerificationService"/>
+    <preference for="Epam\Verification\Api\OrderVerificationManagementInterface"
+                type="Epam\Verification\Model\Service\OrderVerificationService"/>
 
-    <preference for="Epam\Development\Api\Data\OrderVerificationInterface"
-                type="Epam\Development\Model\OrderVerification"/>
-    <type name="Epam\Development\Model\ResourceModel\Order\Verification">
+    <preference for="Epam\Verification\Api\Data\OrderVerificationInterface"
+                type="Epam\Verification\Model\OrderVerification"/>
+    <type name="Epam\Verification\Model\ResourceModel\Order\Verification">
         <arguments>
             <argument name="connectionName" xsi:type="string">sales</argument>
         </arguments>

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Epam\Development\ViewModel;
+namespace Epam\Verification\ViewModel;
 
 use Magento\Framework\App\RequestInterface;
 use Magento\Framework\DataObject;

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Epam\Development\Observer\Frontend;
+namespace Epam\Verification\Observer\Frontend;
 
 use Magento\Framework\Event\Observer;
 use Magento\Framework\Event\ObserverInterface;

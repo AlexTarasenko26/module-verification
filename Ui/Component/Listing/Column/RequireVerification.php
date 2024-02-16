@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Epam\Development\Ui\Component\Listing\Column;
+namespace Epam\Verification\Ui\Component\Listing\Column;
 
-use Epam\Development\Api\OrderVerificationRepositoryInterface;
+use Epam\Verification\Api\OrderVerificationRepositoryInterface;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
 use Magento\Framework\View\Element\UiComponentFactory;
 use Magento\Ui\Component\Listing\Columns\Column;

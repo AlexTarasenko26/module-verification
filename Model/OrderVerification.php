@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Epam\Development\Model;
+namespace Epam\Verification\Model;
 use Magento\Framework\DataObject;
-use Epam\Development\Api\Data\OrderVerificationInterface;
+use Epam\Verification\Api\Data\OrderVerificationInterface;
 
 class OrderVerification extends DataObject implements OrderVerificationInterface
 {

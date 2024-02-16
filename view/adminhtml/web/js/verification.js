@@ -5,7 +5,7 @@ define(['uiComponent', 'ko', 'mage/storage', 'mage/url'], function (Component, k
     //the returned object as a view model constructor
     return Component.extend({
         defaults: {
-            template: 'Epam_Development/verification_checkbox'
+            template: 'Epam_Verification/verification_checkbox'
         },
         message: ko.observable("Verification"),
         /**

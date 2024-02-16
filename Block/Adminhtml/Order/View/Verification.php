@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Epam\Development\Block\Adminhtml\Order\View;
+namespace Epam\Verification\Block\Adminhtml\Order\View;
 
 use Magento\Backend\Block\Template;
 

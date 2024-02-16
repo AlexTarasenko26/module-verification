@@ -1,5 +1,5 @@
 {
-    "name": "epam/development",
+    "name": "epam/verification",
     "description": "Add require verification field to the order",
     "require": {
         "php": "~8.0.0 || ~8.1.0 || ~8.2.0"
@@ -10,7 +10,7 @@
             "registration.php"
         ],
         "psr-4": {
-            "Epam\\Development\\": ""
+            "Epam\\Verification\\": ""
         }
     },
     "version": "1.0.1"
