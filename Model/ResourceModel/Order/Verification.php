@@ -10,6 +10,9 @@ class Verification extends AbstractDb
     private const TABLE_NAME = 'sales_order';
     private const PRIMARY_KEY = 'entity_id';
 
+    /**
+     * @return void
+     */
     protected function _construct()
     {
         $this->_init(self::TABLE_NAME, self::PRIMARY_KEY);

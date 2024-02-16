@@ -8,6 +8,10 @@ use Magento\Framework\Event\ObserverInterface;
 
 class Verification implements ObserverInterface
 {
+    /**
+     * @param Observer $observer
+     * @return void
+     */
     public function execute(Observer $observer)
     {
         $order = $observer->getEvent()->getOrder();
