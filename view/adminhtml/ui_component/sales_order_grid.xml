@@ -12,4 +12,15 @@
             </settings>
         </column>
     </columns>
+    <listingToolbar name="listing_top">
+        <massaction name="listing_massaction" component="Magento_Ui/js/grid/tree-massactions">
+            <action name="verify">
+                <settings>
+                    <url path="verification/order/verify"/>
+                    <type>verify</type>
+                    <label translate="true">Verify</label>
+                </settings>
+            </action>
+        </massaction>
+    </listingToolbar>
 </listing>
