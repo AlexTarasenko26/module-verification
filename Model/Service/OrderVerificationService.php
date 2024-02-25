@@ -62,7 +62,7 @@ class OrderVerificationService implements OrderVerificationManagementInterface
         $resultJson->setHttpResponseCode($responseCode);
         $resultJson->setData([
             "success" => true,
-            "message" => $orderData['order_data']
+            "message" => "Not able to verify order"
         ]);
         return $resultJson;
     }
